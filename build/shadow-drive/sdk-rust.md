@@ -148,8 +148,8 @@ Adds storage capacity to the specified StorageAccount.
 #### **Example of `add_storage`**
 
 ```rust
-let add_immutable_storage_response = shdw_drive_client
-    .add_immutable_storage(storage_account_key, Byte::from_str("1MB").expect("invalid byte string"))
+let add_storage_response = shdw_drive_client
+    .add_storage(storage_account_key, Byte::from_str("1MB").expect("invalid byte string"))
     .await?;
 ```
 
@@ -597,7 +597,7 @@ This method is used to get the amount of storage currently used by a given stora
 
 ```rust
 let storage_account_size = shdw_drive_client
-    .get_stroage_account_size(&storage_account_key)
+    .get_storage_account_size(&storage_account_key)
     .await?;
 ```
 
